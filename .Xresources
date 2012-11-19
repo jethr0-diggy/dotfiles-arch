@@ -1,0 +1,104 @@
+urxvt*font:             xft:terminus:size=8:antialias=false
+urxvt*termName:         rxvt
+urxvt*background:       #151515
+urxvt*foreground:       #c2c2c2
+urxvt*scrollBar:        false
+urxvt*matcher.button:   1
+urxvt*transparent:      false
+urxvt*allow_bold:       true
+
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+
+!URxvt.tabbed_new.tabren-bg: 7
+!URxvt.tabbed_new.tabdiv-fg: 6
+!URxvt.tabbed_new.tabbar-fg: 6
+!URxvt.tabbed_new.tabbar-bg: 0
+!URxvt.tabbed_new.tabsel-fg: 1
+!URxvt.tabbed_new.tabsel-bg: 7
+!URxvt.tabbed_new.tab-fg:    6
+!URxvt.tabbed_new.tab-bg:    8
+
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
+
+URxvt*geometry: 80x24
+URxvt*fading:        0
+!URxvt*tintColor:     #ffffff
+URxvt*shading:       0
+URxvt*inheritPixmap:     False
+
+!black
+*color0: #393939
+*color8: #474747
+
+!!red
+*color1: #da4939
+*color9: #ff6c5c
+
+!!green
+*color2 : #9acc79
+*color10: #8fb676
+
+!!yellow
+*color3:  #d0d26b
+*color11: #c8bc45
+
+!!blue
+*color4: #6d9cbe
+*color12: #d0d0ff
+
+!!magenta
+*color5: #9f5079
+*color13: #a761c2
+
+!!cyan
+*color6: #435d75
+*color14: #6e98a4
+
+!!white
+*color7: #c2c2c2
+*color15: #c2c2c2
+
+!TXT Normal, Normal, Cursor
+!URxvt.background  : #3f3f3f
+!URxvt.foreground  : #dcdccc
+URxvt.cursorColor : #93b3a3
+
+!HLT Include, StatusLine, ErrorMsg
+URxvt.colorBD     : #c2c2c2
+URxvt.colorUL     : #7f9f7f
+URxvt.colorIT     : #93b3a3
+!}}}
+
+! xscreensaver ---------------------------------------------------------------
+
+!font settings
+xscreensaver.Dialog.headingFont:        -*-terminus-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-terminus-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-12-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         #7f8f9f
+xscreensaver.Dialog.background:         #0c0d0e
+xscreensaver.Dialog.topShadowColor:     #0c0d0e
+xscreensaver.Dialog.bottomShadowColor:  #0c0d0e
+xscreensaver.Dialog.Button.foreground:  #0c0d0e
+xscreensaver.Dialog.Button.background:  #7f8f9f
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #0c0d0e
+xscreensaver.Dialog.text.background:    #7f8f9f
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        20
+xscreensaver.Dialog.shadowThickness:    2
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  #7f8f9f
+xscreensaver.passwd.thermometer.background:  #0c0d0e
+xscreensaver.passwd.thermometer.width:       10
+!datestamp format--see the strftime(3) manual page for details
+xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
