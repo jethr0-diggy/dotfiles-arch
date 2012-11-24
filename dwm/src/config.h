@@ -1,0 +1,1 @@
+/home/jethro/.dwm/config.h

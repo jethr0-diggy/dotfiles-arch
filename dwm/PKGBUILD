@@ -1,0 +1,106 @@
+# $Id: PKGBUILD 60970 2011-12-19 21:33:58Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Dag Odenhall <dag.odenhall@gmail.com>
+# Contributor: Grigorios Bouzakis <grbzks@gmail.com>
+
+pkgname=dwm
+pkgver=6.0
+pkgrel=1
+pkgdesc="A dynamic window manager for X"
+url="http://dwm.suckless.org"
+arch=('i686' 'x86_64')
+license=('MIT')
+options=(zipman)
+depends=('libx11' 'libxinerama')
+install=dwm.install
+source=(http://dl.suckless.org/dwm/dwm-$pkgver.tar.gz
+	config.h
+	dwm.desktop)
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '2453e037f46449774ec8afab49b4f1a2'
+         '939f403a71b6e85261d09fc3412269ee')
+
+build() {
+  cd $srcdir/$pkgname-$pkgver
+  cp $srcdir/config.h config.h
+  sed -i 's/CPPFLAGS =/CPPFLAGS +=/g' config.mk
+  sed -i 's/^CFLAGS = -g/#CFLAGS += -g/g' config.mk
+  sed -i 's/^#CFLAGS = -std/CFLAGS += -std/g' config.mk
+  sed -i 's/^LDFLAGS = -g/#LDFLAGS += -g/g' config.mk
+  sed -i 's/^#LDFLAGS = -s/LDFLAGS += -s/g' config.mk
+  make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+}
+
+package() {
+  cd $srcdir/$pkgname-$pkgver
+  make PREFIX=/usr DESTDIR=$pkgdir install
+  install -m644 -D LICENSE $pkgdir/usr/share/licenses/$pkgname/LICENSE
+  install -m644 -D README $pkgdir/usr/share/doc/$pkgname/README
+  install -m644 -D $srcdir/dwm.desktop $pkgdir/usr/share/xsessions/dwm.desktop
+}
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'a0c0fa590c7c21d15a20085348627d18'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '35625dda753021197c5edb2f61b24414'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '627e5a0b734a7a1f375f7381f9e33a3e'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'db6a6a0e94476a070f61b6bada5da81d'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '5a5c1b566fdb50900c916d3ace55205e'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'b81617c82c47900efc05047c1f38c77f'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'c06a36d146f6077ebb6cc8737fd982f3'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'bd3688f15b781f9e3900859a4fa69ba5'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '3ca17c7b9bb117375fb705e731d8d770'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '7c131bd6558a876b7ba1a2f5edf5d80b'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '521992fed7bd00b9691bdfad61407569'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '08ff21235b33a44f2ce523e83def0988'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'baab4ee9cf70ff6ced02375d91089912'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '158942d8296384ee9799dfc648070ff5'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '22e947489870bb42cb3635b833fc63ad'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '4cc3ed985c10ccac45030386c7757892'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '97f0073f15468bba71af98c63465063b'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '459162b1365d91e0effbd5b0ae284b37'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'f71ed46ed032b47dd9f16fdceee0fa34'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '2a3f8f837dcecaac205606ce58487a3e'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '48f51e947fa85b1fd22685f8476248f6'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '284a2b7efe5c477f110b3826ddb22b24'
+         '939f403a71b6e85261d09fc3412269ee')
