@@ -1,4 +1,3 @@
-" vimrc by bohoomil
 " vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:fdm=indent:fdn=1:ft=vim:
 
 " pathogen
@@ -27,7 +26,7 @@ endif
 
 set background=light
 set guicursor=a:blinkon0
-set nu!                    " line numbering
+set number                    " line numbering
 set smartindent
 
 " wrap'n'jump by display lines
